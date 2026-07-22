@@ -13,13 +13,15 @@ cmake -B build
 cmake --build build
 ```
 
-Run from the repo root so the CSV paths resolve:
+Run from the repo root so the CSV paths resolve. The Visual Studio generator (the default on Windows) puts the binaries in a `Debug/` subfolder:
 
 ```
-./build/linear_main.exe
-./build/logistic_main.exe
-./build/softmax_main.exe
+./build/Debug/linear_main.exe
+./build/Debug/logistic_main.exe
+./build/Debug/softmax_main.exe
 ```
+
+Single-config generators like Ninja or MinGW Makefiles place them directly in `build/` instead (e.g. `./build/linear_main.exe`).
 
 ## The Models
 
